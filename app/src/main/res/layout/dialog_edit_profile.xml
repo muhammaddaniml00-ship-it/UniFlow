@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/bg_card">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Lengkap *"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/etProfileName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Contoh: Budi Santoso"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_hint"
+        android:background="@drawable/bg_edit_text"
+        android:paddingHorizontal="12dp"
+        android:inputType="textPersonName|textCapWords"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NIM"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/etProfileNim"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Contoh: 12345678"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_hint"
+        android:background="@drawable/bg_edit_text"
+        android:paddingHorizontal="12dp"
+        android:inputType="number"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Program Studi"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/etProfileProgram"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Contoh: Teknik Informatika"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_hint"
+        android:background="@drawable/bg_edit_text"
+        android:paddingHorizontal="12dp"
+        android:inputType="textCapSentences"
+        android:layout_marginBottom="4dp" />
+
+</LinearLayout>

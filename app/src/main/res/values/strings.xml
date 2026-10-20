@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UniFlow</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_tasks">My Tasks</string>
+    <string name="nav_profile">Profile</string>
+    <string name="total_tasks">Total Tugas</string>
+    <string name="pending_tasks">Belum Selesai</string>
+    <string name="done_tasks">Selesai</string>
+    <string name="recent_tasks">Tugas Terbaru</string>
+    <string name="no_tasks_yet">Belum ada tugas.\nTambah tugas baru sekarang!</string>
+    <string name="add_task">Tambah Tugas</string>
+    <string name="task_title_hint">Nama Tugas *</string>
+    <string name="task_subject_hint">Mata Kuliah</string>
+    <string name="task_deadline_hint">Tenggat (DD/MM/YYYY)</string>
+    <string name="btn_go_to_tasks">Lihat Semua Tugas →</string>
+    <string name="profile_title">Profil Mahasiswa</string>
+    <string name="edit_profile">Edit Profil</string>
+    <string name="stat_title">Statistik Tugas</string>
+</resources>

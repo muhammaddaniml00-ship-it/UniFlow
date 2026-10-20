@@ -1,0 +1,16 @@
+*.iml
+.gradle
+/local.properties
+
+# Konfigurasi lokal Android Studio (tidak perlu di-upload)
+/.idea/
+
+# File APK (terlalu besar untuk repo, build ulang dari source code)
+*.apk
+
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
