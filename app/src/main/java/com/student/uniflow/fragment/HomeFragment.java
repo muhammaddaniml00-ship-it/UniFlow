@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -29,6 +31,7 @@ public class HomeFragment extends Fragment {
     private RecyclerView rvRecent;
     private RecentTaskAdapter recentAdapter;
     private View emptyRecentView;
+    private View statsRow;
     private Button btnGoToTasks;
 
     @Nullable
@@ -51,6 +54,7 @@ public class HomeFragment extends Fragment {
         rvRecent = view.findViewById(R.id.rvRecentTasks);
         emptyRecentView = view.findViewById(R.id.tvEmptyRecent);
         btnGoToTasks = view.findViewById(R.id.btnGoToTasks);
+        statsRow = view.findViewById(R.id.statsRow);
 
         rvRecent.setLayoutManager(new LinearLayoutManager(requireContext()));
         List<Task> recentTasks = dbHelper.getRecentTasks(5);
@@ -62,6 +66,14 @@ public class HomeFragment extends Fragment {
                 ((MainActivity) getActivity()).navigateToTasks();
             }
         });
+
+        // Animasi greeting fade-in
+        tvGreeting.startAnimation(AnimationUtils.loadAnimation(requireContext(), R.anim.fade_in));
+
+        // Animasi pop untuk kartu statistik
+        if (statsRow != null) {
+            statsRow.startAnimation(AnimationUtils.loadAnimation(requireContext(), R.anim.pop_scale));
+        }
 
         refreshData();
     }

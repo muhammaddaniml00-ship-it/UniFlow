@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- Glow lembut di area header -->
+    <gradient
+        android:type="linear"
+        android:angle="270"
+        android:startColor="#22BB86FC"
+        android:endColor="#00BB86FC" />
+</shape>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- Gradient bergaya anime: ungu gelap di atas memudar ke hitam-ungu -->
+    <gradient
+        android:type="linear"
+        android:angle="270"
+        android:startColor="#1F0A3D"
+        android:centerColor="#121028"
+        android:endColor="#0D0D1A" />
+</shape>

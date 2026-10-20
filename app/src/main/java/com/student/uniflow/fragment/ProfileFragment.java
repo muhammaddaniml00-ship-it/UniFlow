@@ -6,6 +6,8 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -24,6 +26,7 @@ public class ProfileFragment extends Fragment {
     private DatabaseHelper dbHelper;
     private TextView tvName, tvNim, tvProgram;
     private TextView tvStatDone, tvStatPending;
+    private View cardProfile, statsRow;
     private Button btnEditProfile;
 
     @Nullable
@@ -45,8 +48,19 @@ public class ProfileFragment extends Fragment {
         tvStatDone = view.findViewById(R.id.tvStatDone);
         tvStatPending = view.findViewById(R.id.tvStatPending);
         btnEditProfile = view.findViewById(R.id.btnEditProfile);
+        cardProfile = view.findViewById(R.id.cardProfile);
+        statsRow = view.findViewById(R.id.statsRow);
 
         btnEditProfile.setOnClickListener(v -> showEditDialog());
+
+        // Animasi slide-up untuk kartu profil
+        if (cardProfile != null) {
+            cardProfile.startAnimation(AnimationUtils.loadAnimation(requireContext(), R.anim.slide_up_fade));
+        }
+        // Animasi pop untuk baris statistik
+        if (statsRow != null) {
+            statsRow.startAnimation(AnimationUtils.loadAnimation(requireContext(), R.anim.pop_scale));
+        }
 
         refreshProfile();
     }

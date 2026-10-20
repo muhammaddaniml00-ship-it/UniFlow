@@ -7,6 +7,8 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -56,7 +58,13 @@ public class TasksFragment extends Fragment implements TaskAdapter.OnTaskActionL
         taskAdapter = new TaskAdapter(requireContext(), tasks, this);
         rvTasks.setAdapter(taskAdapter);
 
-        fabAdd.setOnClickListener(v -> showTaskDialog(null));
+        fabAdd.setOnClickListener(v -> {
+            // Animasi rotasi FAB
+            Animation rotate = AnimationUtils.loadAnimation(requireContext(), R.anim.fab_rotate);
+            fabAdd.startAnimation(rotate);
+            // Buka dialog setelah animasi sedikit jalan
+            fabAdd.postDelayed(() -> showTaskDialog(null), 150);
+        });
 
         refreshTasks();
     }

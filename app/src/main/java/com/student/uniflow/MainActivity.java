@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private void loadFragment(Fragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()
+                .setCustomAnimations(R.anim.fade_in, R.anim.fragment_fade_out)
                 .replace(R.id.fragmentContainer, fragment)
                 .commit();
     }
